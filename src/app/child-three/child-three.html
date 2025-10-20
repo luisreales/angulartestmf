@@ -1,1 +1,11 @@
-<p>child-three works!</p>
+<section class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
+  <button class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+          [disabled]="form().invalid || submitting()"
+          (click)="save.emit()">
+    {{ submitting() ? 'Saving...' : 'Save' }}
+  </button>
+  <button class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
+          (click)="cancelProduct.emit()">
+    Cancel
+  </button>
+</section>

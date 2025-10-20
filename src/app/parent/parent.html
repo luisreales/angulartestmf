@@ -1,1 +1,56 @@
-<p>parent works!</p>
+<div class="min-h-screen bg-gray-50 py-4 md:py-8">
+  <div class="max-w-7xl mx-auto px-2 md:px-4">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8 text-center">Products - CRUD With Children's Components</h1>
+
+    <!-- Error Message -->
+    @if (error()) {
+      <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
+        Error: {{ error() }}
+      </div>
+    }
+
+    <!-- Delete Confirmation Modal -->
+    @if (showDeleteModal()) {
+      <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4">
+          <h3 class="text-lg font-semibold mb-4">Confirm Delete</h3>
+          <p class="text-gray-600 mb-6">
+            Are you sure you want to delete the product "<strong>{{ productToDelete()?.name }}</strong>"?
+            This action cannot be undone.
+          </p>
+          <div class="flex gap-3 justify-end">
+            <button class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
+                    (click)="onDeleteCancelled()">
+              Cancel
+            </button>
+            <button class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors"
+                    (click)="onDeleteConfirmed()">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+
+    <!-- Show List by default, Form when showForm is true -->
+    @if (!showForm()) {
+      <!-- Products List Section -->
+      <app-child-two [products]="products()" (edit)="onEdit($event)" (remove)="onRemove($event)" (reloadData)="onReloadData()" (confirmDelete)="onConfirmDelete($event)"></app-child-two>
+
+      <!-- New Product Button -->
+      <div class="mt-6 text-center">
+        <button class="px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors font-medium"
+                (click)="onCreateNew()">
+          New Product
+        </button>
+      </div>
+    } @else {
+      <!-- Product Form Section -->
+      <div class="mb-8">
+        <app-child-one [form]="form" [title]="isEditing() ? 'Edit Product' : 'New Product'"></app-child-one>
+        <app-child-three [form]="form" [submitting]="submitting()"
+                         (save)="onSave()" (cancelProduct)="onCancel()"></app-child-three>
+      </div>
+    }
+  </div>
+</div>

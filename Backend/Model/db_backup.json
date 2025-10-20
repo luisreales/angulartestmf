@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Notebook",
+      "sku": "NBK-001",
+      "price": 9.99,
+      "category": "Office",
+      "description": "Cuaderno rayado A4"
+    },
+    {
+      "id": "2",
+      "name": "Mechanical Keyboard",
+      "sku": "KEY-002",
+      "price": 89.5,
+      "category": "Peripherals",
+      "description": "Teclado mecánico switch brown"
+    },
+    {
+      "id": "3",
+      "name": "Wireless Mouse",
+      "sku": "MSE-003",
+      "price": 29.99,
+      "category": "Peripherals",
+      "description": "Mouse inalámbrico ergonómico"
+    },
+    {
+      "id": "4",
+      "name": "Monitor 24\"",
+      "sku": "MON-004",
+      "price": 199.99,
+      "category": "Displays",
+      "description": "Monitor LED Full HD 24 pulgadas"
+    },
+    {
+      "id": "5",
+      "name": "USB Flash Drive 32GB",
+      "sku": "USB-005",
+      "price": 14.99,
+      "category": "Storage",
+      "description": "Memoria USB 3.0 de 32GB"
+    },
+    {
+      "id": "6",
+      "name": "External Hard Drive 1TB",
+      "sku": "HDD-006",
+      "price": 79.99,
+      "category": "Storage",
+      "description": "Disco duro externo USB 3.0 1TB"
+    },
+    {
+      "id": "7",
+      "name": "Webcam HD",
+      "sku": "CAM-007",
+      "price": 49.99,
+      "category": "Peripherals",
+      "description": "Cámara web HD 1080p con micrófono"
+    },
+    {
+      "id": "8",
+      "name": "Headphones",
+      "sku": "HPH-008",
+      "price": 39.99,
+      "category": "Audio",
+      "description": "Auriculares inalámbricos con cancelación de ruido"
+    },
+    {
+      "id": "9",
+      "name": "Printer Ink Cartridge",
+      "sku": "INK-009",
+      "price": 24.99,
+      "category": "Consumables",
+      "description": "Cartucho de tinta negro para impresora"
+    },
+    {
+      "id": "10",
+      "name": "Laptop Stand",
+      "sku": "STD-010",
+      "price": 34.99,
+      "category": "Accessories",
+      "description": "Soporte ajustable para laptop"
+    }
+  ]
+}
