@@ -1,4 +1,4 @@
-import { Component, inject, signal, computed, OnInit } from "@angular/core";
+import { Component, signal, computed, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import {Api} from '../services/api';
@@ -17,7 +17,6 @@ import { Product, NewProduct } from '../shared/product';
   styleUrl: './parent.css'
 })
 export class Parent implements OnInit{
-  private api = inject(Api);
 
   //Handle the state of the products
   products = signal<Product[]>([]);
@@ -39,7 +38,8 @@ export class Parent implements OnInit{
 
   });
 
-  constructor() {
+  // eslint-disable-next-line @angular-eslint/prefer-inject
+  constructor(private api: Api) {
     // Constructor is required for Angular components
   }
 

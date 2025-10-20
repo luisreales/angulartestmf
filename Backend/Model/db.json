@@ -1,28 +1,12 @@
 {
   "products": [
     {
-      "id": "10d2",
-      "name": "Mechanical Keyboard",
-      "sku": "KEY-002",
-      "price": 89.5,
-      "category": "Peripherals",
-      "description": "Teclado mecánico switch brown"
-    },
-    {
       "id": "9072",
-      "name": "Webcam HD",
+      "name": "Webcam HDx",
       "sku": "CAM-007",
       "price": 49.99,
       "category": "Peripherals",
       "description": "Cámara web HD 1080p con micrófono"
-    },
-    {
-      "id": "9535",
-      "name": "Wireless Mouse",
-      "sku": "MSE-003",
-      "price": 29.99,
-      "category": "Peripherals",
-      "description": "Mouse inalámbrico ergonómico"
     },
     {
       "id": "ed25",
